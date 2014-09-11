@@ -15,7 +15,7 @@ TODO
 * ? swp files
 
 * + move buffer in windows and not moving the cursor
-* + http://vim.wikia.com/wiki/Easier_buffer_switching
+* + <http://vim.wikia.com/wiki/Easier_buffer_switching>
 * + VisVim
 * + Ctrl-Y
 * + status line
@@ -78,21 +78,19 @@ leave buffer and close it
     with http://vim.wikia.com/wiki/Deleting_a_buffer_without_closing_the_window
 	Details:bp("buffer previous") moves us to a different buffer in the current window (bn would work, too), then bd # ("buffer delete" "alternate file") deletes the buffer we just moved away from. See: help bp, help bd, help alternate-file.
 
-* Buffer switching 
-  http://vim.wikia.com/wiki/Easier_buffer_switching
 
-
-Windows (both Native and Cygwin*) will use _gvimrc, .gvimrc, _vimrc and .vimrc in that order of priority. The gvim* files will be checked with the gvim process, while the console vim will only check the vim* files.
-
-set syntax=xml
+* set syntax=xml
 
 * check compile-time feature
    echo has('python')
 
 Plugins to install
 ==================
+* Windows (both Native and Cygwin) will use _gvimrc, .gvimrc, _vimrc and .vimrc in that order of priority. The gvim files will be checked with the gvim process, while the console vim will only check the vim files.
 
-* https://github.com/valloric/MatchTagAlways Vim plugin for showing matching html tags
+* %HOME%/vimfiles/ on Windows \ ~/.vim/ on Unix
+
+* <https://github.com/valloric/MatchTagAlways> Vim plugin for showing matching html tags
 
 
 
