@@ -12,6 +12,7 @@ create my repo at server : https://github.com/mikeandreev/MyC.git
 	git add tools/git-notes.txt
 	git push -u origin master
 
+...
 
 	git pull
 
