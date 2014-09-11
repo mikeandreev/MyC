@@ -29,42 +29,44 @@ tips
 ====
 
 * named registers
-    * "ay8j   - copy 8 lines below the cursor to name register 'a'
-    * "ap     - paste content of register 'a'
+	"ay8j   - copy 8 lines below the cursor to name register 'a'
+	"ap     - paste content of register 'a'
 
 * moving window in buffer
-    * zz / z<Enter> - move current line to the middle of the screen
-    * zt / z. - move current line to the top of the screen
-    * zb / z- - move current line to the bottom of the screen
+	zz / z<Enter> - move current line to the middle of the screen
+	zt / z. - move current line to the top of the screen
+	zb / z- - move current line to the bottom of the screen
 
-    * Ctrl-e Moves screen up one line
-    * Ctrl-y Moves screen down one line
-    * Ctrl-u Moves screen up ½ page
-    * Ctrl-d Moves screen down ½ page
-    * Ctrl-b Moves screen up one page
-    * Ctrl-f Moves screen down one page
+	Ctrl-e Moves screen up one line
+	Ctrl-y Moves screen down one line
+	Ctrl-u Moves screen up ½ page
+	Ctrl-d Moves screen down ½ page
+	Ctrl-b Moves screen up one page
+	Ctrl-f Moves screen down one page
 
 * undo: u
-  redo: <Ctrl-R>
+  redo: ``<Ctrl-R>``
 
 * ? folding
-  set folding=syntax
+	set folding=syntax
 
 * indent
-``
-  >> "one line
-  5>> "5 lines
-  Ctrl+Q jjj > "makr a block of 3 line below and add indent
-``
+	>> "one line
+	5>> "5 lines
+	Ctrl+Q jjj > "makr a block of 3 line below and add indent
+
 * set cursorcolumn
 * tabs
-    :tabnew / :tabn / :tabp
+	:tabnew / :tabn / :tabp
 
 * navigation between tabs
-    ctrl+w h/j/k/l
+	ctrl+w h/j/k/l
 
 * check current parameter value
-   set guifont?
+	set guifont?
+
+* check compile-time feature
+	echo has('python')
 
 * case insensive search
 	/\ccopyright
@@ -74,15 +76,11 @@ tips
 * close buffer without closing current split
 leave buffer and close it
 	bp|bd #
-    :Bclose
-    with http://vim.wikia.com/wiki/Deleting_a_buffer_without_closing_the_window
-	Details:bp("buffer previous") moves us to a different buffer in the current window (bn would work, too), then bd # ("buffer delete" "alternate file") deletes the buffer we just moved away from. See: help bp, help bd, help alternate-file.
+	:Bclose -- with <http://vim.wikia.com/wiki/Deleting_a_buffer_without_closing_the_window>
 
+Details: bp("buffer previous") moves us to a different buffer in the current window (bn would work, too), then bd # ("buffer delete" "alternate file") deletes the buffer we just moved away from. See: help bp, help bd, help alternate-file.
 
 * set syntax=xml
-
-* check compile-time feature
-   echo has('python')
 
 Plugins to install
 ==================
