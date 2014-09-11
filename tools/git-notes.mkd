@@ -25,7 +25,7 @@ create my repo at server : https://github.com/mikeandreev/MyC.git
 
 ### Basic configuration
 	git config --global user.name "Mihail Andreev"
-	git config [--global] user.email mikeandreev@gmail.com
+	git config [--global] user.email mikeandreev....com
 
 (    git commit --amend --reset-author )
 	git config --global core.excludesfile ~/.gitignore
