@@ -28,6 +28,7 @@ create my repo at server : https://github.com/mikeandreev/MyC.git
 	git config [--global] user.email mikeandreev....com
 
 (    git commit --amend --reset-author )
+
 	git config --global core.excludesfile ~/.gitignore
 
 ### start git on windows
