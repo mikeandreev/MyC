@@ -2,36 +2,46 @@
 TODO
 ====
 
-? move buffer in windows and not moving the cursor
-? http://vim.wikia.com/wiki/Easier_buffer_switching
-? copying current file name to clipboard
-? code / xml folding
-? basic vim scripting
-  ? http://www.ibm.com/developerworks/library/l-vim-script-1/
-? test .vimrc in terminal
-(? http://cream.sourceforge.net/featurelist.html -- ? doesn't work with vim 7.4)
-? swp files 
-? https://github.com/gregsexton/MatchTag
-+. save session
-  - paths in store/load functions
-  http://stackoverflow.com/questions/5142099/auto-save-vim-session-on-quit-and-auto-reload-session-on-start
-  ? load files on start without questions
-+ VisVim
-- Ctrl-Y
-+. status line
-+. Ctrl+C / +V
-+. Ctrl+S
-+ default encoding
-+ default: open files for RW
-+ edit with existing vim - default in context menu
+* ? move buffer in windows and not moving the cursor
+
+* ? http://vim.wikia.com/wiki/Easier_buffer_switching
+
+* ? copying current file name to clipboard
+
+* ? code / xml folding
+
+* ? basic vim scripting
+    * ? http://www.ibm.com/developerworks/library/l-vim-script-1/
+
+* ? test .vimrc in terminal
+
+* (? http://cream.sourceforge.net/featurelist.html -- ? doesn't work with vim 7.4)
+
+* ? swp files
+* ? https://github.com/gregsexton/MatchTag
+* +. save session
+    * - paths in store/load functions
+    http://stackoverflow.com/questions/5142099/auto-save-vim-session-on-quit-and-auto-reload-session-on-start
+    * ? load files on start without questions
+* + VisVim
+* + Ctrl-Y
+* + status line
+* + Ctrl+C / +V
+* + Ctrl+S
+* + default encoding
+* + default: open files for RW
+* + edit with existing vim - default in context menu
 
 tips
 ====
 
-* named ragisters
+* named registers
+
     "ay8j   - copy 8 lines below the cursor to name register 'a'
     "ap     - paste content of register 'a'
+
 * moving window in buffer
+
     zz / z<Enter> - move current line to the middle of the screen
     zt / z. - move current line to the top of the screen
     zb / z- - move current line to the bottom of the screen
@@ -45,8 +55,8 @@ tips
 
 * undo: u
   redo: <Ctrl-R>
-  
-*? folding 
+
+* ? folding
   set folding=syntax
 
 * indent
@@ -76,13 +86,25 @@ leave buffer and close it
     with http://vim.wikia.com/wiki/Deleting_a_buffer_without_closing_the_window
 	Details:bp("buffer previous") moves us to a different buffer in the current window (bn would work, too), then bd # ("buffer delete" "alternate file") deletes the buffer we just moved away from. See: help bp, help bd, help alternate-file.
 
-  ** Buffer switching 
+* Buffer switching 
   http://vim.wikia.com/wiki/Easier_buffer_switching
 
 
 Windows (both Native and Cygwin*) will use _gvimrc, .gvimrc, _vimrc and .vimrc in that order of priority. The gvim* files will be checked with the gvim process, while the console vim will only check the vim* files.
 
 set syntax=xml
+
+* check compile-time feature
+   echo has('python')
+
+Plugins to install
+==================
+
+* https://github.com/valloric/MatchTagAlways Vim plugin for showing matching html tags
+
+
+
+
 
 
 
