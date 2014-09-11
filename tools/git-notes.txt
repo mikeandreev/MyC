@@ -1,0 +1,16 @@
+
+
+-----------------------------
+--- new repo creation
+E:\dev\DSR\MyC
+> git init
+
+( create my repo at server : https://github.com/mikeandreev/MyC.git )
+
+git remote add origin https://github.com/mikeandreev/MyC.git
+
+-----------------------------
+--- start git on windows
+> c:\opt\Git\bin\sh.exe --login -i
+
+
