@@ -1,0 +1,28 @@
+
+
+
+### new repo creation
+E:\dev\DSR\MyC
+    git init
+> create my repo at server : https://github.com/mikeandreev/MyC.git
+    git remote add origin https://github.com/mikeandreev/MyC.git
+    git add tools/git-notes.txt
+    git push -u origin master
+...
+    git pull
+...
+    git commit --dry-run -a
+
+### git with http proxy
+    git config [--global] http.proxy proxy.de.db.com:8080
+
+### Basic configuration
+   git config --global user.name "Mihail Andreev"
+   git config [--global] user.email mikeandreev@gmail.com
+(    git commit --amend --reset-author )
+  git config --global core.excludesfile ~/.gitignore
+
+### start git on windows
+	c:\opt\Git\bin\sh.exe --login -i
+
+
