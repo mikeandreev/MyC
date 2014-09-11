@@ -72,8 +72,8 @@ tips
 
 
 * close buffer without closing current split
-leave buffer and close it 
-	bp|bd # 
+leave buffer and close it
+	bp|bd #
     :Bclose
     with http://vim.wikia.com/wiki/Deleting_a_buffer_without_closing_the_window
 	Details:bp("buffer previous") moves us to a different buffer in the current window (bn would work, too), then bd # ("buffer delete" "alternate file") deletes the buffer we just moved away from. See: help bp, help bd, help alternate-file.
