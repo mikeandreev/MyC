@@ -2,27 +2,20 @@
 TODO
 ====
 
-* ? move buffer in windows and not moving the cursor
-
-* ? http://vim.wikia.com/wiki/Easier_buffer_switching
-
-* ? copying current file name to clipboard
-
-* ? code / xml folding
+* ? test .vimrc in terminal
+* .+ git project for dot files and working notes
+* -+ copying current file name to clipboard
+* -+ save session
+    * - paths in store/load functions
+    * ? load files on start without questions
+* +. code / xml folding
 
 * ? basic vim scripting
-    * ? http://www.ibm.com/developerworks/library/l-vim-script-1/
-
-* ? test .vimrc in terminal
-
-* (? http://cream.sourceforge.net/featurelist.html -- ? doesn't work with vim 7.4)
-
+    * ? <http://www.ibm.com/developerworks/library/l-vim-script-1/>
 * ? swp files
-* ? https://github.com/gregsexton/MatchTag
-* +. save session
-    * - paths in store/load functions
-    http://stackoverflow.com/questions/5142099/auto-save-vim-session-on-quit-and-auto-reload-session-on-start
-    * ? load files on start without questions
+
+* + move buffer in windows and not moving the cursor
+* + http://vim.wikia.com/wiki/Easier_buffer_switching
 * + VisVim
 * + Ctrl-Y
 * + status line
@@ -36,22 +29,20 @@ tips
 ====
 
 * named registers
-
-    "ay8j   - copy 8 lines below the cursor to name register 'a'
-    "ap     - paste content of register 'a'
+    * "ay8j   - copy 8 lines below the cursor to name register 'a'
+    * "ap     - paste content of register 'a'
 
 * moving window in buffer
+    * zz / z<Enter> - move current line to the middle of the screen
+    * zt / z. - move current line to the top of the screen
+    * zb / z- - move current line to the bottom of the screen
 
-    zz / z<Enter> - move current line to the middle of the screen
-    zt / z. - move current line to the top of the screen
-    zb / z- - move current line to the bottom of the screen
-
-    Ctrl-e Moves screen up one line
-    Ctrl-y Moves screen down one line
-    Ctrl-u Moves screen up ½ page
-    Ctrl-d Moves screen down ½ page
-    Ctrl-b Moves screen up one page
-    Ctrl-f Moves screen down one page
+    * Ctrl-e Moves screen up one line
+    * Ctrl-y Moves screen down one line
+    * Ctrl-u Moves screen up ½ page
+    * Ctrl-d Moves screen down ½ page
+    * Ctrl-b Moves screen up one page
+    * Ctrl-f Moves screen down one page
 
 * undo: u
   redo: <Ctrl-R>
@@ -60,16 +51,17 @@ tips
   set folding=syntax
 
 * indent
+``
   >> "one line
   5>> "5 lines
   Ctrl+Q jjj > "makr a block of 3 line below and add indent
-
+``
+* set cursorcolumn
 * tabs
-  :tabnew 
-  :tabn / :tabp
+    :tabnew / :tabn / :tabp
 
 * navigation between tabs
-   ctrl+w h/j/k/l
+    ctrl+w h/j/k/l
 
 * check current parameter value
    set guifont?

@@ -119,6 +119,8 @@ onoremap <C-Tab> <C-C><C-W>w
 set autoread
 set encoding=utf-8
 set number
+set cursorline
+"set cursorcolumn
 syntax on
 "set vb " turns off visual bell
 set autoindent
@@ -216,14 +218,15 @@ endif
 " <<<
 
 " >>> saving / restoring sessions
+" http://stackoverflow.com/questions/5142099/auto-save-vim-session-on-quit-and-auto-reload-session-on-start
 fu! SaveSess()
-    execute 'call mkdir( C:\Mike\.vim )'
-    execute 'mksession! C:\Mike\.vim\session.vim '
+    execute 'call mkdir( '.expand('~\.vim').' )'
+    execute 'mksession! '.expand('~\.vim\session.vim')
 endfunction
 
 fu! RestoreSess()
-if filereadable('C:\Mike\.vim\session.vim')
-execute 'so C:\Mike\.vim\session.vim '
+if filereadable(expand('~\.vim\session.vim'))
+execute 'so '.expand('~\.vim\session.vim')
 if bufexists(1)
     for l in range(1, bufnr('$'))
         if bufwinnr(l) == -1
