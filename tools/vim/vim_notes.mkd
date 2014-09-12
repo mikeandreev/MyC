@@ -2,6 +2,13 @@
 TODO
 ====
 
+* tags
+  ? <http://majutsushi.github.io/tagbar/>
+  ? <http://vim-taglist.sourceforge.net/>
+    <http://ctags.sourceforge.net/>
+      <http://oreilly.com/catalog/vi6/chapter/ch08.html#ch08_05.htm>
+  <https://github.com/tomtom/ttags_vim>
+
 * ? turn off Russian menu localisation on Duo
 * ? test .vimrc in terminal
 
@@ -9,6 +16,24 @@ TODO
     * ? <http://www.ibm.com/developerworks/library/l-vim-script-1/>
 * ? swp files
 
+* markers
+
+* :help key-mapping
+
+* Search in Multiple Files
+  pdf.p.72
+  :set spell
+  :set spelllang=en,da,de,it
+
+  :set guitabtooltip=%!bufname($)
+  pdf.p.45
+
+  FoldSpellBalloon()
+  pdf.p.53
+
+
+
+* . copy/pate registets
 * .+ git project for dot files and working notes
 * -+ copying current file name to clipboard
 * -+ save session
@@ -16,6 +41,7 @@ TODO
     * ? load files on start without questions
 * +. code / xml folding
 
+* + current line 
 * + move buffer in windows and not moving the cursor
 * + <http://vim.wikia.com/wiki/Easier_buffer_switching>
 * + VisVim
