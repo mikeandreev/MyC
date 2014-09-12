@@ -1,13 +1,8 @@
 
 TODO
 ====
-
-* tags
-  ? <http://majutsushi.github.io/tagbar/>
-  ? <http://vim-taglist.sourceforge.net/>
-    <http://ctags.sourceforge.net/>
-      <http://oreilly.com/catalog/vi6/chapter/ch08.html#ch08_05.htm>
-  <https://github.com/tomtom/ttags_vim>
+* open in existing vim in new tab : --remote-tab-silent
+* ? <http://vim.sourceforge.net/scripts/script_search_results.php?order_by=rating>
 
 * ? turn off Russian menu localisation on Duo
 * ? test .vimrc in terminal
@@ -41,6 +36,12 @@ TODO
     * ? load files on start without questions
 * +. code / xml folding
 
+* +tags
+	* + <http://majutsushi.github.io/tagbar/>
+    * <http://ctags.sourceforge.net/>
+	* - <http://vim-taglist.sourceforge.net/>
+	* ? <https://github.com/tomtom/ttags_vim>
+
 * + current line 
 * + move buffer in windows and not moving the cursor
 * + <http://vim.wikia.com/wiki/Easier_buffer_switching>
@@ -55,7 +56,6 @@ TODO
 
 tips
 ====
-
 * named registers
 	"ay8j   - copy 8 lines below the cursor to name register 'a'
 	"ap     - paste content of register 'a'
@@ -115,6 +115,8 @@ Plugins to install
 * Windows (both Native and Cygwin) will use _gvimrc, .gvimrc, _vimrc and .vimrc in that order of priority. The gvim files will be checked with the gvim process, while the console vim will only check the vim files.
 
 * %HOME%/vimfiles/ on Windows \ ~/.vim/ on Unix
+
+* <http://majutsushi.github.io/tagbar/>
 
 * <https://github.com/valloric/MatchTagAlways> Vim plugin for showing matching html tags
 

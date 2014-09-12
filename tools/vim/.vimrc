@@ -136,6 +136,17 @@ set listchars=tab:>.,trail:~,extends:>,precedes:<
 "default is not to show invisible stuff
 set list !
 
+" required by Taglist plugin
+"filetype on
+if has('win32')
+  " let Tlist_Ctags_Cmd='c:\opt\ctags\ctags.exe'
+  "can be checked with :echo system(Tlist_Ctags_Cmd . ' --version') 
+  " tagbar
+  let g:tagbar_ctags_bin='c:\opt\ctags\ctags.exe'
+  "can be checked with :echo system( g:tagbar_ctags_bin . ' --version') 
+endif
+nmap <F8> :TagbarToggle<CR>
+
 " >>> gui 
 if has("gui_running")
   if has("gui_gtk2")
