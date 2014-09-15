@@ -82,9 +82,9 @@ endif
 
 " Alt-Space is System menu
 if has("gui")
-  noremap <M-Space> :simalt ~<CR>
-  inoremap <M-Space> <C-O>:simalt ~<CR>
-  cnoremap <M-Space> <C-C>:simalt ~<CR>
+  noremap <A-Space> :simalt ~<CR>
+  inoremap <A-Space> <C-O>:simalt ~<CR>
+  cnoremap <A-Space> <C-C>:simalt ~<CR>
 endif
 
 " CTRL-A is Select all
@@ -118,18 +118,35 @@ onoremap <C-Tab> <C-C><C-W>w
 " === === My preferences === ===
 set autoread
 set encoding=utf-8
+" >>> locale
+" http://habrahabr.ru/post/183222/
+scriptencoding utf-8
+" Отображение во внутренних сообщениях программы
+lan mes en_GB.UTF-8
+" Отображение в меню
+set langmenu=en_GB.UTF-8
+" spelling
+"setlocal spell spelllang=ru_yo,en_us
+setlocal spell spelllang=
+" <<<
+
 set number
 set cursorline
 "set cursorcolumn
-syntax on
+syntax enable
+set showcmd             " show command in bottom bar
+set showmatch           " highlight matching [{()}]
+
 "set vb " turns off visual bell
 set autoindent
 set smartindent
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab "Current MSVC convension
 "set softtabstop=4 shiftwidth=4 expandtab "Typical for Java code convension
 
+set foldenable          " enable folding
 let g:xml_syntax_folding=1
-set foldmethod=syntax
+set foldmethod=syntax   " see ':help foldmethod' for more opton
+set foldlevelstart=99   " open most folds by default
 
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set listchars=tab:>.,trail:~,extends:>,precedes:<
@@ -147,7 +164,7 @@ if has('win32')
 endif
 nmap <F8> :TagbarToggle<CR>
 
-" >>> gui 
+" >>> gui
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Courier\ New\ 11
@@ -161,6 +178,15 @@ if has("gui_running")
     "set guifont=Courier_New:h11:cRUSSIAN
     set guifont=Consolas:h10:cRUSSIAN
   endif
+
+  " color
+  "colorscheme badwolf " https://github.com/sjl/badwolf/
+
+  " https://github.com/altercation/Vim-colors-solarized   // http://ethanschoonover.com/solarized
+  "set background=dark
+  set background=light
+  colorscheme solarized
+
 endif
 " <<<
 
@@ -212,20 +238,20 @@ endfunction
 
 "Bind the BufSel() function to a user-command
 command! -nargs=1 Bs :call BufSel("<args>")
-:nnoremap <F5> :buffers<CR>:buffer<Space>
+:nnoremap <F6> :buffers<CR>:buffer<Space>
 " <<<
 
 " >>> short cuts to copy file name to cliboard
 " http://vim.wikia.com/wiki/Copy_filename_to_clipboard
 if has('win32')
   " Convert slashes to backslashes for Windows.
-  nmap ,cs :let @*=substitute(expand("%"), "/", "\\", "g")
-  nmap ,cl :let @*=substitute(expand("%:p"), "/", "\\", "g")
+  nmap ,cs :let @*=substitute(expand("%"), "/", "\\", "g")<CR>
+  nmap ,cl :let @*=substitute(expand("%:p"), "/", "\\", "g")<CR>
 else
   "nmap ,cs :let @*=expand("%")
   "nmap ,cl :let @*=expand("%:p")
-  nmap ,cs :let @+=expand("%")
-  nmap ,cl :let @+=expand("%:p")
+  nmap ,cs :let @+=expand("%")<CR>
+  nmap ,cl :let @+=expand("%:p")<CR>
 endif
 " <<<
 

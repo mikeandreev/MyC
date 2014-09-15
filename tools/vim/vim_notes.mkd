@@ -5,6 +5,11 @@ TODO
 * ? <http://vim.sourceforge.net/scripts/script_search_results.php?order_by=rating>
 
 * ? turn off Russian menu localisation on Duo
+	* .+ http://habrahabr.ru/post/183222/
+	* ? layout and shortcuts issue
+	* http://habrahabr.ru/post/175709/
+	* http://habrahabr.ru/post/98393/
+
 * ? test .vimrc in terminal
 
 * ? basic vim scripting
@@ -26,7 +31,9 @@ TODO
   FoldSpellBalloon()
   pdf.p.53
 
-
+* ? vim as python IDE/interactive env
+* ? vim for LaTeX
+* ? vim for perl
 
 * . copy/pate registets
 * .+ git project for dot files and working notes
@@ -115,6 +122,8 @@ Plugins to install
 * Windows (both Native and Cygwin) will use _gvimrc, .gvimrc, _vimrc and .vimrc in that order of priority. The gvim files will be checked with the gvim process, while the console vim will only check the vim files.
 
 * %HOME%/vimfiles/ on Windows \ ~/.vim/ on Unix
+
+* <https://github.com/altercation/Vim-colors-solarized>
 
 * <http://majutsushi.github.io/tagbar/>
 

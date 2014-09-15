@@ -1,0 +1,8 @@
+
+MSVC Tips
+=========
+
+* Progressive Scroll
+* VsVim
+* solarized color theam <http://ethanschoonover.com/solarized>
+
