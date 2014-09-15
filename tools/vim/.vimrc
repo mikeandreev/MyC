@@ -258,7 +258,7 @@ endif
 " >>> saving / restoring sessions
 " http://stackoverflow.com/questions/5142099/auto-save-vim-session-on-quit-and-auto-reload-session-on-start
 fu! SaveSess()
-    execute 'call mkdir( '.expand('~\.vim').' )'
+    "execute 'call mkdir( '.expand('~\.vim').' )'
     execute 'mksession! '.expand('~\.vim\session.vim')
 endfunction
 

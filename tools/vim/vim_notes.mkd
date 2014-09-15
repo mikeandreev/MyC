@@ -103,6 +103,9 @@ tips
 * check compile-time feature
 	echo has('python')
 
+* process part of the current buffer with external program, and replace the text with the programm output
+	:. ! perl e:\tmp\utestParser1.pl E:\path\to\result.2014-09-15_12-50.txt
+
 * case insensive search
 	/\ccopyright
 	Also, \c can appear anywhere in the pattern, so if you type a pattern and then decide you wanted a case-insensitive search, just add a \c at the end.
