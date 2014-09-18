@@ -1,6 +1,14 @@
 
 TODO
 ====
+* ack
+* EasyMotion
+* ? other fuzzy searchers. FuzzyFinder, Command-T
+* <http://www.bestofvim.com/plugin/pathogen/>
+* <http://www.bestofvim.com/plugin/match-it/>
+* vim undo model 
+
+* open in existing vim in new tab : --remote-tab-silent
 * ? <http://vim.sourceforge.net/scripts/script_search_results.php?order_by=rating>
 
 * <http://www.bestofvim.com/>
