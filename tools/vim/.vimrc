@@ -151,8 +151,9 @@ set foldlevelstart=99   " open most folds by default
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set listchars=tab:>.,trail:~,extends:>,precedes:<
 "default is not to show invisible stuff
-set list !
+set list!
 
+" >>> tags
 " required by Taglist plugin
 "filetype on
 if has('win32')
@@ -163,6 +164,20 @@ if has('win32')
   "can be checked with :echo system( g:tagbar_ctags_bin . ' --version') 
 endif
 nmap <F8> :TagbarToggle<CR>
+" <<<
+
+" >>> CtrlP
+let g:ctrlp_working_path_mode = 'cr'
+" RX project
+let g:ctrlp_root_markers = [ 'RMS_DBAX.vs11.sln', '.gitignore' ]
+let g:ctrlp_custom_ignore = {
+	\ 'dir':  '\v[\/](Debug_Win32_VS2012|Release_Win32_VS2012)$',
+	\ 'file': '\v\.(exe|so|dll|jar)$',
+	\ }
+	" \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+let g:ctrlp_max_files=0
+"let g:ctrlp_max_depth=40
+" <<<
 
 " >>> gui
 if has("gui_running")

@@ -1,12 +1,18 @@
 
 TODO
 ====
-* open in existing vim in new tab : --remote-tab-silent
 * ? <http://vim.sourceforge.net/scripts/script_search_results.php?order_by=rating>
 
-* ? turn off Russian menu localisation on Duo
-	* .+ http://habrahabr.ru/post/183222/
-	* ? layout and shortcuts issue
+* <http://www.bestofvim.com/>
+
+* <https://github.com/mileszs/ack.vim>
+
+* https://www.youtube.com/watch?v=knSFZCKMy20
+	https://github.com/wincent/Command-T =~ Ctrl-P
+	https://github.com/sjbach/lusty  =~ Ctrl-P
+
+
+* ? layout and shortcuts issue
 	* http://habrahabr.ru/post/175709/
 	* http://habrahabr.ru/post/98393/
 
@@ -49,6 +55,8 @@ TODO
 	* - <http://vim-taglist.sourceforge.net/>
 	* ? <https://github.com/tomtom/ttags_vim>
 
+* + turn off Russian menu localisation on Duo
+	* .+ http://habrahabr.ru/post/183222/
 * + current line 
 * + move buffer in windows and not moving the cursor
 * + <http://vim.wikia.com/wiki/Easier_buffer_switching>
@@ -110,6 +118,13 @@ tips
 	/\ccopyright
 	Also, \c can appear anywhere in the pattern, so if you type a pattern and then decide you wanted a case-insensitive search, just add a \c at the end.
 
+* CtrlP
+	:CtrlPClearAllCaches 
+
+* bufexplorer
+	BufExplorer Plugin for Vim
+	With bufexplorer, you can quickly and easily switch between buffers by using the one of the default public interfaces:
+	'\be' (normal open) or '\bs' (force horizontal split open) or '\bv' (force vertical split open)
 
 * close buffer without closing current split
 leave buffer and close it
@@ -120,11 +135,17 @@ Details: bp("buffer previous") moves us to a different buffer in the current win
 
 * set syntax=xml
 
+* open in existing vim in new tab : --remote-tab-silent
+
 Plugins to install
 ==================
 * Windows (both Native and Cygwin) will use _gvimrc, .gvimrc, _vimrc and .vimrc in that order of priority. The gvim files will be checked with the gvim process, while the console vim will only check the vim files.
 
 * %HOME%/vimfiles/ on Windows \ ~/.vim/ on Unix
+
+* <https://github.com/jlanzarotta/bufexplorer>
+
+* Ctrl-P <https://github.com/kien/ctrlp.vim>
 
 * <https://github.com/altercation/Vim-colors-solarized>
 
