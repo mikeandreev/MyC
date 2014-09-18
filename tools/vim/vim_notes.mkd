@@ -1,6 +1,15 @@
 
 TODO
 ====
+* ack
+* pathogen
+* EasyMotion
+* ? other fuzzy searchers. FuzzyFinder, Command-T
+* <http://www.bestofvim.com/plugin/pathogen/>
+* <http://www.bestofvim.com/plugin/match-it/>
+* vim undo model 
+
+* open in existing vim in new tab : --remote-tab-silent
 * ? <http://vim.sourceforge.net/scripts/script_search_results.php?order_by=rating>
 
 * <http://www.bestofvim.com/>
@@ -76,8 +85,8 @@ tips
 	"ap     - paste content of register 'a'
 
 * moving window in buffer
-	zz / z<Enter> - move current line to the middle of the screen
-	zt / z. - move current line to the top of the screen
+	zt / z<Enter> - move current line to the top of the screen
+	zz / z. - move current line to the middle of the screen
 	zb / z- - move current line to the bottom of the screen
 
 	Ctrl-e Moves screen up one line

@@ -1,0 +1,15 @@
+
+# Always sort the files
+--sort-files
+
+# Always color, even if piping to a another program
+#--color
+
+--type-set=dbml:ext:dbml
+
+#default cpp type: .cpp .cc .cxx .m .hpp .hh .h .hxx
+--type-set=cpp_src:ext:cpp
+
+--type-set=cpp_h:ext:h,hpp
+
+
