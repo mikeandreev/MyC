@@ -152,6 +152,8 @@ Plugins to install
 
 * %HOME%/vimfiles/ on Windows \ ~/.vim/ on Unix
 
+* <https://github.com/mileszs/ack.vim>
+
 * <https://github.com/jlanzarotta/bufexplorer>
 
 * Ctrl-P <https://github.com/kien/ctrlp.vim>
