@@ -1,13 +1,14 @@
 
 TODO
 ====
-* ack
+* + ack
 * pathogen
 * EasyMotion
 * ? other fuzzy searchers. FuzzyFinder, Command-T
 * <http://www.bestofvim.com/plugin/pathogen/>
 * <http://www.bestofvim.com/plugin/match-it/>
 * vim undo model 
+* <http://vim.wikia.com/wiki/VimTip227> Power of g
 
 * open in existing vim in new tab : --remote-tab-silent
 * ? <http://vim.sourceforge.net/scripts/script_search_results.php?order_by=rating>
@@ -110,6 +111,13 @@ tips
 * set cursorcolumn
 * tabs
 	:tabnew / :tabn / :tabp
+
+* find and delete lines ``:g/\ctpleft/d``
+    :[range]g/pattern/cmd
+    :g!/pattern/d
+    :v/pattern/d
+
+* ":edit" / ":edit!" command, without specifying a file name, to reload the current file.
 
 * navigation between tabs
 	ctrl+w h/j/k/l

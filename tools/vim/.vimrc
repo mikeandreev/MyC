@@ -137,7 +137,8 @@ syntax enable
 set showcmd             " show command in bottom bar
 set showmatch           " highlight matching [{()}]
 
-"set vb " turns off visual bell
+" no visual or sound bell
+set vb t_vb= 
 set autoindent
 set smartindent
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab "Current MSVC convension
