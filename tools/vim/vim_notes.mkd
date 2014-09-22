@@ -97,6 +97,10 @@ tips
 	Ctrl-b Moves screen up one page
 	Ctrl-f Moves screen down one page
 
+* Ctrl+O takes me to the previous location. Don't know about location before the search.
+    Also, `. will take you to the last change you made.
+ 
+
 * undo: u
   redo: ``<Ctrl-R>``
 

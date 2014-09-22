@@ -172,8 +172,8 @@ let g:ctrlp_working_path_mode = 'cr'
 " RX project
 let g:ctrlp_root_markers = [ 'RMS_DBAX.vs11.sln', '.gitignore' ]
 let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/](Debug_Win32_VS2012|Release_Win32_VS2012)$',
-	\ 'file': '\v\.(exe|so|dll|jar)$',
+	\ 'dir':  '\v[\/](Debug_Win32_VS2012|Release_Win32_VS2012|Debug|Release)$',
+	\ 'file': '\v\.(exe|so|dll|jar|pdb|ilk|obj)$',
 	\ }
 	" \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
 let g:ctrlp_max_files=0
