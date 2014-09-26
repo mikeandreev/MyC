@@ -139,10 +139,13 @@ set showmatch           " highlight matching [{()}]
 
 " no visual or sound bell
 set vb t_vb= 
+set hlsearch
+"nohlsearch
 set autoindent
 set smartindent
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab "Current MSVC convension
 "set softtabstop=4 shiftwidth=4 expandtab "Typical for Java code convension
+
 
 set foldenable          " enable folding
 let g:xml_syntax_folding=1
@@ -172,8 +175,8 @@ let g:ctrlp_working_path_mode = 'cr'
 " RX project
 let g:ctrlp_root_markers = [ 'RMS_DBAX.vs11.sln', '.gitignore' ]
 let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/](Debug_Win32_VS2012|Release_Win32_VS2012|Debug|Release)$',
-	\ 'file': '\v\.(exe|so|dll|jar|pdb|ilk|obj)$',
+	\ 'dir':  '\v[\/](Debug_Win32_VS2012|Release_Win32_VS2012)$',
+	\ 'file': '\v\.(exe|so|dll|jar)$',
 	\ }
 	" \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
 let g:ctrlp_max_files=0
