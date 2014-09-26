@@ -190,15 +190,15 @@ Plugins to install
 	git clone git://github.com/majutsushi/tagbar
 
 * <https://github.com/valloric/MatchTagAlways> Vim plugin for showing matching html tags
-
-	git clone https://github.com/Valloric/MatchTagAlways.git
+    git clone https://github.com/Valloric/MatchTagAlways.git
 
 * pathogen <https://github.com/tpope/vim-pathogen>
-	mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-	mkdir ~/.vimrc/bundle
-	cd ~/.vimrc/bundle
-	git clone _url_
+
+    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+    mkdir ~/.vimrc/bundle
+    cd ~/.vimrc/bundle
+    git clone _url_
 
 
 
