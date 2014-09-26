@@ -1,9 +1,6 @@
 
 TODO
 ====
-* + ack
-* pathogen
-
 * https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
 * ? other fuzzy searchers. FuzzyFinder, Command-T
 * <http://www.bestofvim.com/plugin/pathogen/>
@@ -60,6 +57,8 @@ TODO
     * ? load files on start without questions
 * +. code / xml folding
 
+* + ack
+* + pathogen
 * +tags
 	* + <http://majutsushi.github.io/tagbar/>
     * <http://ctags.sourceforge.net/>
@@ -164,6 +163,10 @@ Plugins to install
 * Windows (both Native and Cygwin) will use _gvimrc, .gvimrc, _vimrc and .vimrc in that order of priority. The gvim files will be checked with the gvim process, while the console vim will only check the vim files.
 
 * %HOME%/vimfiles/ on Windows \ ~/.vim/ on Unix
+
+* vim-session <https://github.com/xolox/vim-session>
+  git clone https://github.com/xolox/vim-misc.git
+  git clone https://github.com/xolox/vim-session.git
 
 * EasyMotion <https://github.com/Lokaltog/vim-easymotion>
 

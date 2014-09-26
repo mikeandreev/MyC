@@ -213,7 +213,8 @@ if has("gui_running")
   "set background=dark
   set background=light
   colorscheme solarized
-
+else " no gui_running
+  set background=dark
 endif
 " <<<
 
@@ -283,20 +284,42 @@ endif
 " <<<
 
 " >>> saving / restoring sessions
+let g:session_autoload = 'yes'
+let g:session_autosave = 'yes'
+if has('__COMMENDED_OUT__')
 " http://stackoverflow.com/questions/5142099/auto-save-vim-session-on-quit-and-auto-reload-session-on-start
 if has('win32')
     let g:save_session_path=expand('~\.vim\session.vim')
 else
     let g:save_session_path=expand('~/.vim/session.vim')
 endif
+let g:save_session=1
+if !has("gui_running")
+    let current_buffer_is_empty = (&modified == 0 && getline(1, '$') == [''])
+    let buffer_list_is_empty = (bufnr('$') == 1 && bufname('%') == '')
+	"let buffer_list_is_persistent = (index(xolox#misc#option#split(&viminfo), '%') >= 0)
+
+    if current_buffer_is_empty && (!buffer_list_is_empty )
+		g:save_session=0
+    endif
+endif
+
 
 fu! SaveSess()
+if !g:save_session
+	return
+endif
     "execute 'call mkdir( '.expand('~\.vim').' )'
     execute 'mksession! '.g:save_session_path
 endfunction
 
 fu! RestoreSess()
-if filereadable(g:save_session_path)
+if !g:save_session
+	return
+endif
+if !filereadable(g:save_session_path)
+    return
+endif
 execute 'so '.g:save_session_path
 if bufexists(1)
     for l in range(1, bufnr('$'))
@@ -305,10 +328,10 @@ if bufexists(1)
         endif
     endfor
 endif
-endif
 endfunction
 
 autocmd VimLeave * call SaveSess()
 autocmd VimEnter * call RestoreSess()
+endif
 " <<<
 
