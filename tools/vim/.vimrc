@@ -193,15 +193,15 @@ let g:ctrlp_max_files=0
 
 " >>> gui
 if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Courier\ New\ 11
+  if has("gui_gtk2") # Ubuntu
+    set guifont=DeJaVu\ Sans\ Mono\ 9
   elseif has("gui_photon")
     set guifont=Courier\ New:s11
   elseif has("gui_kde")
     set guifont=Courier\ New/11/-1/5/50/0/0/0/1/0
   elseif has("x11")
     set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
-  else
+  else " has("win32")
     "set guifont=Courier_New:h11:cRUSSIAN
     set guifont=Consolas:h10:cRUSSIAN
   endif
@@ -284,14 +284,20 @@ endif
 
 " >>> saving / restoring sessions
 " http://stackoverflow.com/questions/5142099/auto-save-vim-session-on-quit-and-auto-reload-session-on-start
+if has('win32')
+    let g:save_session_path=expand('~\.vim\session.vim')
+else
+    let g:save_session_path=expand('~/.vim/session.vim')
+endif
+
 fu! SaveSess()
     "execute 'call mkdir( '.expand('~\.vim').' )'
-    execute 'mksession! '.expand('~\.vim\session.vim')
+    execute 'mksession! '.g:save_session_path
 endfunction
 
 fu! RestoreSess()
-if filereadable(expand('~\.vim\session.vim'))
-execute 'so '.expand('~\.vim\session.vim')
+if filereadable(g:save_session_path)
+execute 'so '.g:save_session_path
 if bufexists(1)
     for l in range(1, bufnr('$'))
         if bufwinnr(l) == -1
