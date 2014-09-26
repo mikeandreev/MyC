@@ -3,7 +3,8 @@ TODO
 ====
 * + ack
 * pathogen
-* EasyMotion
+
+* https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
 * ? other fuzzy searchers. FuzzyFinder, Command-T
 * <http://www.bestofvim.com/plugin/pathogen/>
 * <http://www.bestofvim.com/plugin/match-it/>
@@ -164,20 +165,40 @@ Plugins to install
 
 * %HOME%/vimfiles/ on Windows \ ~/.vim/ on Unix
 
+* EasyMotion <https://github.com/Lokaltog/vim-easymotion>
+
+	git clone https://github.com/Lokaltog/vim-easymotion.git
+
 * <https://github.com/mileszs/ack.vim>
+
+	git clone https://github.com/mileszs/ack.vim.git
 
 * <https://github.com/jlanzarotta/bufexplorer>
 
+	git clone https://github.com/jlanzarotta/bufexplorer.git
+
 * Ctrl-P <https://github.com/kien/ctrlp.vim>
+
+	git clone https://github.com/kien/ctrlp.vim.git
 
 * <https://github.com/altercation/Vim-colors-solarized>
 
+	git clone https://github.com/altercation/vim-colors-solarized.git
+
 * <http://majutsushi.github.io/tagbar/>
+
+	git clone git://github.com/majutsushi/tagbar
 
 * <https://github.com/valloric/MatchTagAlways> Vim plugin for showing matching html tags
 
+	git clone https://github.com/Valloric/MatchTagAlways.git
 
-
+* pathogen <https://github.com/tpope/vim-pathogen>
+	mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+	mkdir ~/.vimrc/bundle
+	cd ~/.vimrc/bundle
+	git clone _url_
 
 
 

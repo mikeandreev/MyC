@@ -4,7 +4,8 @@
 "
 
 set nocompatible
-
+" Pathogen plugin manager
+execute pathogen#infect()
 " ===============================================================
 " === === ms windows shortcuts === ===
 
@@ -95,11 +96,17 @@ onoremap <C-A> <C-C>gggH<C-O>G
 snoremap <C-A> <C-C>gggH<C-O>G
 xnoremap <C-A> <C-C>ggVG
 
-" CTRL-Tab is Next window
-noremap <C-Tab> <C-W>w
-inoremap <C-Tab> <C-O><C-W>w
-cnoremap <C-Tab> <C-C><C-W>w
-onoremap <C-Tab> <C-C><C-W>w
+" CTRL-Tab and CTRL-T to switch between buffers and windows
+noremap <C-T> <C-W>w
+inoremap <C-T> <C-O><C-W>w
+cnoremap <C-T> <C-C><C-W>w
+onoremap <C-T> <C-C><C-W>w
+
+nnoremap <C-S-Tab> :tabprevious<CR>
+nnoremap <C-Tab>   :tabnext<CR>
+inoremap <C-S-Tab> <Esc>:tabprevious<CR>i
+inoremap <C-Tab>   <Esc>:tabnext<CR>i
+
 
 " CTRL-F4 is Close window
 "noremap <C-F4> <C-W>c
@@ -143,6 +150,7 @@ set hlsearch
 "nohlsearch
 set autoindent
 set smartindent
+filetype plugin indent on
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab "Current MSVC convension
 "set softtabstop=4 shiftwidth=4 expandtab "Typical for Java code convension
 
