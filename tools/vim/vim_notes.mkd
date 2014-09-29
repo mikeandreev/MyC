@@ -167,7 +167,7 @@ Plugins to install
 * %HOME%/vimfiles/ on Windows \ ~/.vim/ on Unix
 
 * <https://github.com/ciaranm/detectindent/blob/master/doc/detectindent.txt>
-    git clone https://github.com/ciaranm/detectindent.git
+        git clone https://github.com/ciaranm/detectindent.git
 
 * vim-session <https://github.com/xolox/vim-session>
   git clone https://github.com/xolox/vim-misc.git
@@ -202,11 +202,11 @@ Plugins to install
 
 * pathogen <https://github.com/tpope/vim-pathogen>
 
-    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-    mkdir ~/.vimrc/bundle
-    cd ~/.vimrc/bundle
-    git clone _url_
+        mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+        curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+        mkdir ~/.vimrc/bundle
+        cd ~/.vimrc/bundle
+        git clone _url_
 
 
 
