@@ -38,10 +38,12 @@ TODO
 
 * Search in Multiple Files
   pdf.p.72
-  :set spell
-  :set spelllang=en,da,de,it
 
-  :set guitabtooltip=%!bufname($)
+        :set spell
+        :set spelllang=en,da,de,it
+
+        :set guitabtooltip=%!bufname($)
+
   pdf.p.45
 
   FoldSpellBalloon()
@@ -84,75 +86,92 @@ TODO
 tips
 ====
 * named registers
-	"ay8j   - copy 8 lines below the cursor to name register 'a'
-	"ap     - paste content of register 'a'
+
+        "ay8j   - copy 8 lines below the cursor to name register 'a'
+        "ap     - paste content of register 'a'
 
 * moving window in buffer
-	zt / z<Enter> - move current line to the top of the screen
-	zz / z. - move current line to the middle of the screen
-	zb / z- - move current line to the bottom of the screen
 
-	Ctrl-e Moves screen up one line
-	Ctrl-y Moves screen down one line
-	Ctrl-u Moves screen up ½ page
-	Ctrl-d Moves screen down ½ page
-	Ctrl-b Moves screen up one page
-	Ctrl-f Moves screen down one page
+        zt / z<Enter> - move current line to the top of the screen
+        zz / z. - move current line to the middle of the screen
+        zb / z- - move current line to the bottom of the screen
+
+        Ctrl-e Moves screen up one line
+        Ctrl-y Moves screen down one line
+        Ctrl-u Moves screen up ½ page
+        Ctrl-d Moves screen down ½ page
+        Ctrl-b Moves screen up one page
+        Ctrl-f Moves screen down one page
 
 * Ctrl+O takes me to the previous location. Don't know about location before the search.
-    Also, `. will take you to the last change you made.
- 
+ Also, `. will take you to the last change you made.
+
 
 * undo: u
-  redo: ``<Ctrl-R>``
+
+        redo: <Ctrl-R>
 
 * ? folding
-	set folding=syntax
+
+        set folding=syntax
 
 * indent
-	>> "one line
-	5>> "5 lines
-	Ctrl+Q jjj > "makr a block of 3 line below and add indent
+
+        >> "one line
+        5>> "5 lines
+        Ctrl+Q jjj > "makr a block of 3 line below and add indent
 
 * set cursorcolumn
 * tabs
-	:tabnew / :tabn / :tabp
+
+        :tabnew / :tabn / :tabp
 
 * find and delete lines ``:g/\ctpleft/d``
-    :[range]g/pattern/cmd
-    :g!/pattern/d
-    :v/pattern/d
+
+        :[range]g/pattern/cmd
+        :g!/pattern/d
+        :v/pattern/d
 
 * ":edit" / ":edit!" command, without specifying a file name, to reload the current file.
 
 * navigation between tabs
-	ctrl+w h/j/k/l
+
+        ctrl+w h/j/k/l
 
 * check current parameter value
-	set guifont?
+
+        set guifont?
 
 * check compile-time feature
-	echo has('python')
+
+        echo has('python')
 
 * process part of the current buffer with external program, and replace the text with the programm output
-	:. ! perl e:\tmp\utestParser1.pl E:\path\to\result.2014-09-15_12-50.txt
+
+        :. ! perl e:\tmp\utestParser1.pl E:\path\to\result.2014-09-15_12-50.txt
 
 * case insensive search
-	/\ccopyright
-	Also, \c can appear anywhere in the pattern, so if you type a pattern and then decide you wanted a case-insensitive search, just add a \c at the end.
+
+        /\ccopyright
+
+Also, \c can appear anywhere in the pattern, so if you type a pattern and then decide you wanted a case-insensitive search, just add a \c at the end.
 
 * CtrlP
-	:CtrlPClearAllCaches 
 
-* bufexplorer
-	BufExplorer Plugin for Vim
-	With bufexplorer, you can quickly and easily switch between buffers by using the one of the default public interfaces:
-	'\be' (normal open) or '\bs' (force horizontal split open) or '\bv' (force vertical split open)
+        :CtrlPClearAllCaches
+
+* BufExplorer Plugin for Vim
+With bufexplorer, you can quickly and easily switch between buffers by using the one of the default public interfaces:
+
+        '\be' (normal open) or 
+        '\bs' (force horizontal split open) or 
+        '\bv' (force vertical split open)
 
 * close buffer without closing current split
 leave buffer and close it
-	bp|bd #
-	:Bclose -- with <http://vim.wikia.com/wiki/Deleting_a_buffer_without_closing_the_window>
+
+        bp|bd #
+        :Bclose -- with <http://vim.wikia.com/wiki/Deleting_a_buffer_without_closing_the_window>
 
 Details: bp("buffer previous") moves us to a different buffer in the current window (bn would work, too), then bd # ("buffer delete" "alternate file") deletes the buffer we just moved away from. See: help bp, help bd, help alternate-file.
 
@@ -167,38 +186,41 @@ Plugins to install
 * %HOME%/vimfiles/ on Windows \ ~/.vim/ on Unix
 
 * <https://github.com/ciaranm/detectindent/blob/master/doc/detectindent.txt>
+
         git clone https://github.com/ciaranm/detectindent.git
 
 * vim-session <https://github.com/xolox/vim-session>
-  git clone https://github.com/xolox/vim-misc.git
-  git clone https://github.com/xolox/vim-session.git
+
+        git clone https://github.com/xolox/vim-misc.git
+        git clone https://github.com/xolox/vim-session.git
 
 * EasyMotion <https://github.com/Lokaltog/vim-easymotion>
 
-	git clone https://github.com/Lokaltog/vim-easymotion.git
+        git clone https://github.com/Lokaltog/vim-easymotion.git
 
 * <https://github.com/mileszs/ack.vim>
 
-	git clone https://github.com/mileszs/ack.vim.git
+        git clone https://github.com/mileszs/ack.vim.git
 
 * <https://github.com/jlanzarotta/bufexplorer>
 
-	git clone https://github.com/jlanzarotta/bufexplorer.git
+        git clone https://github.com/jlanzarotta/bufexplorer.git
 
 * Ctrl-P <https://github.com/kien/ctrlp.vim>
 
-	git clone https://github.com/kien/ctrlp.vim.git
+        git clone https://github.com/kien/ctrlp.vim.git
 
 * <https://github.com/altercation/Vim-colors-solarized>
 
-	git clone https://github.com/altercation/vim-colors-solarized.git
+        git clone https://github.com/altercation/vim-colors-solarized.git
 
 * <http://majutsushi.github.io/tagbar/>
 
-	git clone http://github.com/majutsushi/tagbar
+        git clone https://github.com/majutsushi/tagbar.git
 
 * <https://github.com/valloric/MatchTagAlways> Vim plugin for showing matching html tags
-    git clone https://github.com/Valloric/MatchTagAlways.git
+
+        git clone https://github.com/Valloric/MatchTagAlways.git
 
 * pathogen <https://github.com/tpope/vim-pathogen>
 
