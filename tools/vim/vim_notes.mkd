@@ -12,6 +12,7 @@ TODO
 * ? <http://vim.sourceforge.net/scripts/script_search_results.php?order_by=rating>
 
 * <http://www.bestofvim.com/>
+* <http://el-tramo.be/blog/my-favorite-vim-plugins/>
 
 * <https://github.com/mileszs/ack.vim>
 
