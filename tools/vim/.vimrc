@@ -143,9 +143,10 @@ set cursorline
 syntax enable
 set showcmd             " show command in bottom bar
 set showmatch           " highlight matching [{()}]
-
+set splitright
+set splitbelow
 " no visual or sound bell
-set vb t_vb= 
+set vb t_vb=
 set hlsearch
 "nohlsearch
 set autoindent
@@ -216,7 +217,8 @@ if has("gui_running")
   "set background=dark
   set background=light
   colorscheme solarized
-
+else " no gui_running
+ set background=dark
 endif
 " <<<
 
@@ -286,32 +288,7 @@ endif
 " <<<
 
 " >>> saving / restoring sessions
-" http://stackoverflow.com/questions/5142099/auto-save-vim-session-on-quit-and-auto-reload-session-on-start
-if has('win32')
-    let g:save_session_path=expand('~\.vim\session.vim')
-else
-    let g:save_session_path=expand('~/.vim/session.vim')
-endif
-
-fu! SaveSess()
-    "execute 'call mkdir( '.expand('~\.vim').' )'
-    execute 'mksession! '.g:save_session_path
-endfunction
-
-fu! RestoreSess()
-if filereadable(g:save_session_path)
-execute 'so '.g:save_session_path
-if bufexists(1)
-    for l in range(1, bufnr('$'))
-        if bufwinnr(l) == -1
-            exec 'sbuffer ' . l
-        endif
-    endfor
-endif
-endif
-endfunction
-
-autocmd VimLeave * call SaveSess()
-autocmd VimEnter * call RestoreSess()
+let g:session_autoload = 'yes'
+let g:session_autosave = 'yes'
 " <<<
 
