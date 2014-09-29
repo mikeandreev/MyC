@@ -13,6 +13,7 @@ TODO
 
 * <http://www.bestofvim.com/>
 * <http://el-tramo.be/blog/my-favorite-vim-plugins/>
+* <http://dougblack.io/words/a-good-vimrc.html>
 
 * <https://github.com/mileszs/ack.vim>
 
