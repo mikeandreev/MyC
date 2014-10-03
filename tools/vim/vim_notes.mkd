@@ -98,8 +98,10 @@ tips
 
         Ctrl-e Moves screen up one line
         Ctrl-y Moves screen down one line
+
         Ctrl-u Moves screen up ½ page
         Ctrl-d Moves screen down ½ page
+
         Ctrl-b Moves screen up one page
         Ctrl-f Moves screen down one page
 
@@ -112,8 +114,16 @@ tips
         redo: <Ctrl-R>
 
 * ? folding
+<http://vim.wikia.com/wiki/Folding>
 
-        set folding=syntax
+        set foldmethod=syntax
+        zc / zo  / za // zC / zC / zA
+        zr / zm // zR / zM
+
+* open file
+        gf 	open in the same window ("goto file")
+        <c-w>f 	open in a new window (Ctrl-w f)
+        <c-w>gf 	open in a new tab (Ctrl-w gf)
 
 * indent
 
@@ -184,6 +194,10 @@ Plugins to install
 * Windows (both Native and Cygwin) will use _gvimrc, .gvimrc, _vimrc and .vimrc in that order of priority. The gvim files will be checked with the gvim process, while the console vim will only check the vim files.
 
 * %HOME%/vimfiles/ on Windows \ ~/.vim/ on Unix
+
+* <https://github.com/tmhedberg/matchit>
+
+        git clone https://github.com/tmhedberg/matchit.git
 
 * <https://github.com/ciaranm/detectindent/blob/master/doc/detectindent.txt>
 
