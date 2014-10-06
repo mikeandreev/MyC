@@ -6,6 +6,8 @@
 set nocompatible
 " Pathogen plugin manager
 execute pathogen#infect()
+
+let mapleader = ","
 " ===============================================================
 " === === ms windows shortcuts === ===
 
@@ -53,6 +55,13 @@ cmap <C-V>		<C-R>+
 "SHIFT-Insert is Paste
 " map <S-Insert>		"+gP
 " cmap <S-Insert>		<C-R>+
+
+" 
+if has('win32')
+  set clipboard=unnamed
+else
+  set clipboard=unnamedplus
+endif
 
 " Pasting blockwise and linewise selections is not possible in Insert and
 " Visual mode without the +virtualedit feature.  They are pasted as if they
@@ -154,12 +163,9 @@ set smartindent
 filetype plugin indent on
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab "Current MSVC convension
 "set softtabstop=4 shiftwidth=4 expandtab "Typical for Java code convension
-
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 et
 autocmd FileType vim setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 au FileType python setl sw=2 sts=2 et
-autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp "Arduino files
-autocmd BufNewFile,BufReadPost *.inl set filetype=cpp "C++ inline includes
 
 
 set foldenable          " enable folding
