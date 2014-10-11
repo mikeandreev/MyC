@@ -207,7 +207,7 @@ let g:ctrlp_max_files=0
 " >>> gui
 if has("gui_running")
   if has("gui_gtk2") " Ubuntu
-    set guifont=DeJaVu\ Sans\ Mono\ 9
+    set guifont=DeJaVu\ Sans\ Mono\ 10
   elseif has("gui_photon")
     set guifont=Courier\ New:s11
   elseif has("gui_kde")
