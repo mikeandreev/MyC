@@ -1,7 +1,10 @@
 
 TODO
 ====
+* save current session periodically
+* host specific vimrc sections/subfiles
 * https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
+* https://github.com/xolox/vim-notes
 * ? other fuzzy searchers. FuzzyFinder, Command-T
 * <http://www.bestofvim.com/plugin/pathogen/>
 * <http://www.bestofvim.com/plugin/match-it/>
