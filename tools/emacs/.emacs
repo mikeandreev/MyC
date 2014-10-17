@@ -1,18 +1,27 @@
+;;;;; emacs start-up parameters:
+;  --no-splash --debug-init
 ;;;;; elpa configuration
+; to install models:
+; M-x list-packages
+; to install:
+;  * all that are require-ed from this file
+;  * ack
+;  * sml-mode (for 2014_proglang)
+; 
 ; -- ver 1
 ; (require 'package)
 ; (push '("marmalade" . "http://marmalade-repo.org/packages/")
 ;       package-archives )
-; (push '("melpa" . "http://melpa.milkbox.net/packages/")
-;       package-archives)
 ; (package-initialize)
 ;; --- ver 2
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("org" . "http://orgmode.org/elpa/")
                         ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/")))
+; (push '("melpa" . "http://melpa.milkbox.net/packages/")  package-archives)
 (package-initialize)
-
+;
+; 
 (defun require-package (package)
   (setq-default highlight-tabs t)
   "Install given PACKAGE."
