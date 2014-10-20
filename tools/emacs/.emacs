@@ -71,3 +71,4 @@
 ;C-s save-buffer
 (global-set-key (kbd "C-s") 'save-buffer)
 
+(global-auto-revert-mode 1)
