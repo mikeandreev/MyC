@@ -1,0 +1,18 @@
+
+Tips
+====
+
+* windows
+
+         M-x split-window-right
+	     split-window-below
+	 C-x o
+	     Select another window
+         C-x 0
+             Get rid of the selected window (kill-window). That is a zero. 
+         C-x 1
+             Get rid of all windows except the selected one (delete-other-windows). 
+         C-x ^
+             Make the selected window taller, at the expense of the other(s) (enlarge-window). 
+         C-x }
+             Widen the selected window (enlarge-window-horizontally). 

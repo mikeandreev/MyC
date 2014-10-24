@@ -50,9 +50,9 @@
 ; evil
 (require 'evil)
 ;   my key binding update in evil-maps.el
-;(define-key evil-read-key-map (kbd "C-q") #'evil-read-quoted-char)
+; (define-key evil-motion-state-map "\C-q" 'evil-visual-block)
 ;   comment out
-;(define-key evil-ex-completion-map "\C-v" #'quoted-insert)
+; (define-key evil-motion-state-map "\C-v" 'evil-visual-block)
 (evil-mode 1)
 ;(global-evil-tabs-mode t)
 (require 'evil-jumper)
