@@ -138,6 +138,9 @@ tips
 * tabs
 
         :tabnew / :tabn / :tabp
+        next tab: gt
+        prev tab: gT
+        numbered tab: nnn g t
 
 * find and delete lines ``:g/\ctpleft/d``
 

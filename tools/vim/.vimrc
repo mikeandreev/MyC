@@ -57,10 +57,18 @@ cmap <C-V>		<C-R>+
 " cmap <S-Insert>		<C-R>+
 
 " 
-if has('win32')
-  set clipboard=unnamed
+"if exists('vsvimcaret') || has('win32')
+"  set clipboard=unnamed
+"else
+"  set clipboard=unnamedplus
+"endif
+" workaround to match vsvim as win32
+if has('unix')
+  if has('clipboard')
+    set clipboard=unnamedplus
+  endif
 else
-  set clipboard=unnamedplus
+  set clipboard=unnamed
 endif
 
 " Pasting blockwise and linewise selections is not possible in Insert and
@@ -106,16 +114,15 @@ snoremap <C-A> <C-C>gggH<C-O>G
 xnoremap <C-A> <C-C>ggVG
 
 " CTRL-Tab and CTRL-T to switch between buffers and windows
-noremap <C-T> <C-W>w
-inoremap <C-T> <C-O><C-W>w
-cnoremap <C-T> <C-C><C-W>w
-onoremap <C-T> <C-C><C-W>w
-
-nnoremap <C-S-Tab> :tabprevious<CR>
-nnoremap <C-Tab>   :tabnext<CR>
-inoremap <C-S-Tab> <Esc>:tabprevious<CR>i
-inoremap <C-Tab>   <Esc>:tabnext<CR>i
-
+"noremap <C-T> <C-W>w
+"inoremap <C-T> <C-O><C-W>w
+"cnoremap <C-T> <C-C><C-W>w
+"onoremap <C-T> <C-C><C-W>w
+"
+"nnoremap <C-S-Tab> :tabprevious<CR>
+"nnoremap <C-Tab>   :tabnext<CR>
+"inoremap <C-S-Tab> <Esc>:tabprevious<CR>i
+"inoremap <C-Tab>   <Esc>:tabnext<CR>i
 
 " CTRL-F4 is Close window
 "noremap <C-F4> <C-W>c
