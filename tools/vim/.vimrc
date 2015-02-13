@@ -169,10 +169,17 @@ set autoindent
 set smartindent
 filetype plugin indent on
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab "Current MSVC convension
-"set softtabstop=4 shiftwidth=4 expandtab "Typical for Java code convension
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 et
+autocmd FileType java setlocal softtabstop=4 shiftwidth=4 expandtab "Typical for Java code convension
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 noexpandtab
 autocmd FileType vim setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-au FileType python setl sw=2 sts=2 et
+
+autocmd FileType haskell setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType cabal setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+
+autocmd FileType md setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+
+autocmd FileType python setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+"au FileType python setl sw=2 sts=2 et
 
 
 set foldenable          " enable folding
