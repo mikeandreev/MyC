@@ -243,9 +243,19 @@ if has("gui_running")
 
   "colorscheme lucius
 else " no gui_running
-  " tested on windows with ConEmu
-  colorscheme default
-  
+  "colorscheme default
+  if has("win32")
+    " tested on windows with ConEmu
+    set term=xterm
+    set t_Co=256
+    let &t_AB="\e[48;5;%dm"
+    let &t_AF="\e[38;5;%dm"
+    "set background=light
+    "colorscheme solarized
+    colorscheme hemisu
+    set background=light
+  endif
+
   " set background=light
   "colorscheme hemisu
 
