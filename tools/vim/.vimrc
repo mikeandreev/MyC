@@ -190,7 +190,7 @@ set foldlevelstart=99   " open most folds by default
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set listchars=tab:>.,trail:~,extends:>,precedes:<
 "default is not to show invisible stuff
-set list!
+set list !
 
 " >>> tags
 " required by Taglist plugin
@@ -240,8 +240,26 @@ if has("gui_running")
   "set background=dark
   set background=light
   colorscheme solarized
+
+  "colorscheme lucius
 else " no gui_running
- set background=dark
+  " tested on windows with ConEmu
+  colorscheme default
+  
+  " set background=light
+  "colorscheme hemisu
+
+  " other options:
+  " ---
+  "let g:lucius_style=light
+  "colorscheme lucius
+  " ---
+  " colorscheme badwolf
+  " ---
+  " set background=light
+  " colorscheme solarized
+  " ---
+  " set t_Co=256
 endif
 " <<<
 

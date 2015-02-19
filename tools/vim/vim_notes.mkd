@@ -262,6 +262,14 @@ Plugins to install
 
         git clone https://github.com/kien/ctrlp.vim.git
 
+* ? color scheme for console 
+https://github.com/sjl/badwolf/
+https://github.com/jonathanfilip/vim-lucius
+
+        git clone https://github.com/sjl/badwolf.git
+        git clone https://github.com/jonathanfilip/vim-lucius.git
+		git clone https://github.com/noahfrederick/vim-hemisu.git
+
 * <https://github.com/altercation/Vim-colors-solarized>
 
         git clone https://github.com/altercation/vim-colors-solarized.git
