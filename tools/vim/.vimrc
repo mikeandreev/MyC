@@ -245,15 +245,18 @@ if has("gui_running")
 else " no gui_running
   "colorscheme default
   if has("win32")
-    " tested on windows with ConEmu
-    set term=xterm
-    set t_Co=256
-    let &t_AB="\e[48;5;%dm"
-    let &t_AF="\e[38;5;%dm"
-    "set background=light
-    "colorscheme solarized
-    colorscheme hemisu
-    set background=light
+    if !empty($CONEMUBUILD)
+      " tested on windows with ConEmu
+      "set term=xterm
+      set term=pcansi
+      set t_Co=256
+      let &t_AB="\e[48;5;%dm"
+      let &t_AF="\e[38;5;%dm"
+      "set background=light
+      "colorscheme solarized
+      colorscheme hemisu
+      set background=light
+    endif
   endif
 
   " set background=light
