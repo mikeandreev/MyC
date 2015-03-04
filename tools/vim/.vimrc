@@ -180,6 +180,7 @@ autocmd FileType md setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 autocmd FileType python setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 "au FileType python setl sw=2 sts=2 et
+au BufRead,BufNewFile *.ipy setfiletype python
 
 
 set foldenable          " enable folding
